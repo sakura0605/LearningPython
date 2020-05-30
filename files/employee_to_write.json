@@ -1,0 +1,29 @@
+{
+    "employees": [
+        {
+            "employeeId": "10001",
+            "name": "John",
+            "totalSalary": 19000.0
+        },
+        {
+            "employeeId": "10002",
+            "name": "Mark",
+            "totalSalary": 21652.5
+        },
+        {
+            "employeeId": "10003",
+            "name": "Jackson",
+            "totalSalary": 25390.0
+        },
+        {
+            "employeeId": "10004",
+            "name": "Jenny",
+            "totalSalary": 18752.5
+        },
+        {
+            "employeeId": "10005",
+            "name": "Hana",
+            "totalSalary": 73001.5
+        }
+    ]
+}

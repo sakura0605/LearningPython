@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<Employees>
+    <Employee Id = "10001" Name="John" BasicSalary="1500" BonusEachMonth = "200"/>
+    <Employee Id = "10002" Name="Mark" BasicSalary="1700" BonusEachMonth = "250.5"/>
+    <Employee Id = "10003" Name="Jackson" BasicSalary="2000" BonusEachMonth = "278"/>
+    <Employee Id = "10004" Name="Jenny" BasicSalary="1500" BonusEachMonth = "150.5"/>
+    <Employee Id = "10005" Name="Hana" BasicSalary="6000" BonusEachMonth = "200.3"/>
+</Employees>
