@@ -1,0 +1,12 @@
+1. We have one .xml file to store data
+2. Define class for all data(attribute, list, tuple)
+3. write in output.txt file with detail info in xml file
+for example:
+There are 9 Components.
+Component: AtomicFunctionHandler
+* There is/are 4 Constant(s)
+	1. NUMBER_OF_LOOPS
+	2. NUMBER_OF_LOOPS_OSAL_TIME
+	3. ERROR_TOLERANCE_PERCENTAGE
+	.....
+do the same with Instance and other components
