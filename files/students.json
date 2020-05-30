@@ -1,0 +1,29 @@
+{
+    "students": [
+        {
+            "fullname": "Cao Hong",
+            "age": 20,
+            "gpa": 9.9
+        },
+        {
+            "fullname": "Ngoc Anh",
+            "age": 18,
+            "gpa": 7.8
+        },
+        {
+            "fullname": "Ngoc Lan",
+            "age": 24,
+            "gpa": 8.8
+        },
+        {
+            "fullname": "Thu Thuy",
+            "age": 14,
+            "gpa": 8.8
+        },
+        {
+            "fullname": "An Nhien",
+            "age": 22,
+            "gpa": 9.8
+        }
+    ]
+}
