@@ -1,4 +1,4 @@
 1. Create Employee class and this class inherits from Salary class
-2. Employee class includes attributes, Salary class include salary calculation function
+2. Employee class includes attributes, Salary class includes salary calculation function
 3. Read .xml file(created before by yourself) and write info into .json file
 4. Using default and copy constructors.
