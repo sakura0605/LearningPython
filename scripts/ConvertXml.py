@@ -1,4 +1,5 @@
 import xml.etree.ElementTree as ET
+from pathlib import Path
 
 from scripts.Components import Constant
 from scripts.Components import Instance
@@ -7,8 +8,9 @@ from scripts.Components import Components
 
 tree = ET.parse('SystemConstants.table.xml')
 root = tree.getroot()
+path = str(Path.cwd().parent)+ "\\files\\output.txt"
 
-file = open("output.txt", "w")
+file = open(path, "w")
 
 # Convert XML file to Python object
 coms = Components()
