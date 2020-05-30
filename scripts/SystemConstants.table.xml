@@ -1,0 +1,313 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<Components>
+  <Component Name="AtomicFunctionHandler" Personality="OSAL">
+    <Constant Name="NUMBER_OF_LOOPS" Value="5" Type="uint32_t"/>
+    <Constant Name="NUMBER_OF_LOOPS_OSAL_TIME" Value="10" Type="uint32_t"/>
+    <Constant Name="ERROR_TOLERANCE_PERCENTAGE" Value="0.05" Type="double"/>
+    <Constant Name="LENGTH_TIME_OF_DAY_WITH_MILLISEC" Value="23" Type="uint32_t"/>
+  </Component>
+  <Component Name="Diagnostics">
+    <Constant Name="ENABLE_PRESTART_BOOT_DIAGNOSTICS" Value="true" Type="bool" Info="Enable prestart boot diagnostic"/>
+    <Constant Name="ENABLE_POSTSTART_BOOT_DIAGNOSTICS" Value="true" Type="bool" Info="Enable poststart boot diagnostic"/>
+    <Constant Name="DIAGNOSTICS_RESULTS_FLUSH_PERIOD_IN_US" Value="30000000" Type="uint64_t" Info="Time period in ultraseconds to flush diagnostics test results to external storage"/>
+  </Component>
+  <Component Name="SystemConstantsTest">
+    <Constant Name="CONSTANT_UINT32" Value="4294967295" Type="uint32_t" Info="A constant of type uint32_t"/>
+    <Constant Name="CONSTANT_INT32_MAX" Value="2147483647" Type="int32_t" Info="A constant of type int32_t, max value"/>
+    <Constant Name="CONSTANT_INT32_MIN" Value="-2147483648" Type="int32_t" Info="A constant of type int32_t, min value"/>
+    <Constant Name="CONSTANT_UINT64" Value="18446744073709551615" Type="uint64_t" Info="A constant of type uint64_t"/>
+    <Constant Name="CONSTANT_INT64_MAX" Value="9223372036854775807" Type="int64_t" Info="A constant of type int64_t, max value"/>
+    <Constant Name="CONSTANT_INT64_MIN" Value="-9223372036854775808" Type="int64_t" Info="A constant of type int64_t, min value"/>
+    <Constant Name="CONSTANT_STRING" Value="Test string" Type="string" Info="A constant of type string"/>
+    <Constant Name="CONSTANT_BOOL_1" Value="true" Type="bool" Info="A constant of type bool, true"/>
+    <Constant Name="CONSTANT_BOOL_2" Value="True" Type="bool" Info="A constant of type bool, True"/>
+    <Constant Name="CONSTANT_BOOL_3" Value="yes" Type="bool" Info="A constant of type bool, yes"/>
+    <Constant Name="CONSTANT_BOOL_4" Value="on" Type="bool" Info="A constant of type bool, on"/>
+    <Constant Name="CONSTANT_BOOL_5" Value="1" Type="bool" Info="A constant of type bool, 1"/>
+    <Constant Name="CONSTANT_BOOL_6" Value="false" Type="bool" Info="A constant of type bool, false"/>
+    <Constant Name="CONSTANT_BOOL_7" Value="False" Type="bool" Info="A constant of type bool, False"/>
+    <Constant Name="CONSTANT_BOOL_8" Value="no" Type="bool" Info="A constant of type bool, no"/>
+    <Constant Name="CONSTANT_BOOL_9" Value="off" Type="bool" Info="A constant of type bool, off"/>
+    <Constant Name="CONSTANT_BOOL_10" Value="0" Type="bool" Info="A constant of type bool, 0"/>
+    <Constant Name="CONSTANT_DOUBLE" Value="123.456" Type="double" Info="A constant of type double"/>
+    <Constant Name="CONSTANT_DEFAULT_ONLY" Value="Default" Type="string" Info="Constant with default value only"/>
+    <Constant Name="CONSTANT_FAMILY_OVERRIDE" Value="Default" Type="string" Info="Constant with family override only"/>
+    <Constant Name="CONSTANT_FAMILY_OVERRIDE" Value="Override" Family="MOI" Type="string" Info="Constant with family override only"/>
+    <Constant Name="CONSTANT_PRODUCT_OVERRIDE" Value="Default" Type="string" Info="Constant with product override only"/>
+    <Constant Name="CONSTANT_PRODUCT_OVERRIDE" Value="Override" Product="Hyenas" Type="string" Info="Constant with product override only"/>
+    <Constant Name="CONSTANT_PROTO_OVERRIDE" Value="Default" Type="string" Info="Constant with proto override only"/>
+    <Constant Name="CONSTANT_PROTO_OVERRIDE" Value="Override" Proto="P1" Type="string" Info="Constant with proto override only"/>
+    <Constant Name="CONSTANT_FAMILY_PRODUCT_OVERRIDE" Value="Default" Type="string" Info="Constant with family and product override"/>
+    <Constant Name="CONSTANT_FAMILY_PRODUCT_OVERRIDE" Value="Override" Type="string" Family="MOI" Product="Hyenas" Info="Constant with family and product override"/>
+    <Constant Name="CONSTANT_FAMILY_PROTO_OVERRIDE" Value="Default" Type="string" Info="Constant with family and proto override"/>
+    <Constant Name="CONSTANT_FAMILY_PROTO_OVERRIDE" Value="Override" Type="string" Family="MOI" Proto="P1" Info="Constant with family and proto override"/>
+    <Constant Name="CONSTANT_PRODUCT_PROTO_OVERRIDE" Value="Default" Type="string" Info="Constant with product and proto override"/>
+    <Constant Name="CONSTANT_PRODUCT_PROTO_OVERRIDE" Value="Override" Type="string" Product="Hyenas" Proto="P1" Info="Constant with product and proto override"/>
+    <Constant Name="CONSTANT_FAMILY_PRODUCT_PROTO_OVERRIDE" Value="Default" Type="string" Info="Constant with family, product and proto override"/>
+    <Constant Name="CONSTANT_FAMILY_PRODUCT_PROTO_OVERRIDE" Value="Override" Type="string" Family="MOI" Product="Hyenas" Proto="P1" Info="Constant with family, product and proto override"/>
+    <Constant Name="CONSTANT_MULTIPLE_OVERRIDES" Value="Default" Type="string" Info="Constant with multiple overrides"/>
+    <Constant Name="CONSTANT_MULTIPLE_OVERRIDES" Value="Family" Type="string" Family="MOI"/>
+    <Constant Name="CONSTANT_MULTIPLE_OVERRIDES" Value="Product" Type="string" Product="Hyenas"/>
+    <Constant Name="CONSTANT_MULTIPLE_OVERRIDES" Value="Proto" Type="string" Proto="P1"/>
+    <Constant Name="CONSTANT_MULTIPLE_OVERRIDES" Value="FamilyProduct" Type="string" Family="MOI" Product="Hyenas"/>
+    <Constant Name="CONSTANT_MULTIPLE_OVERRIDES" Value="FamilyProto" Type="string" Family="MOI" Proto="P1"/>
+    <Constant Name="CONSTANT_MULTIPLE_OVERRIDES" Value="ProductProto" Type="string" Product="Hyenas" Proto="P1"/>
+    <Constant Name="CONSTANT_MULTIPLE_OVERRIDES" Value="FamilyProductProto" Type="string" Family="MOI" Product="Hyenas" Proto="P1"/>
+    <Constant Name="CONSTANT_INSTANCE_OVERRIDE" Value="Class" Type="string" Info="Constant with multiple overrides"/>
+    <Constant Name="CONSTANT_INSTANCE_OVERRIDE" Value="Class" Type="string" Family="MOI"/>
+    <Constant Name="CONSTANT_INSTANCE_OVERRIDE" Value="Class" Type="string" Product="Hyenas"/>
+    <Constant Name="CONSTANT_INSTANCE_OVERRIDE" Value="Class" Type="string" Proto="P1"/>
+    <Constant Name="CONSTANT_INSTANCE_OVERRIDE" Value="Class" Type="string" Family="MOI" Product="Hyenas"/>
+    <Constant Name="CONSTANT_INSTANCE_OVERRIDE" Value="Class" Type="string" Family="MOI" Proto="P1"/>
+    <Constant Name="CONSTANT_INSTANCE_OVERRIDE" Value="Class" Type="string" Product="Hyenas" Proto="P1"/>
+    <Constant Name="CONSTANT_INSTANCE_OVERRIDE" Value="Class" Type="string" Family="MOI" Product="Hyenas" Proto="P1"/>
+    <Constant Name="CONSTANT_ACCEPTED_VALUES_OVERRIDE" Value="3" Type="uint32_t" AcceptedValues="1..5" Info="Constant with accepted values"/>
+    <Constant Name="CONSTANT_ACCEPTED_VALUES_OVERRIDE" Value="10" Family="MOI" Type="uint32_t" AcceptedValues="6..10" Info="Constant with accepted values"/>
+    <Constant Name="CONSTANT_ACCEPTED_VALUES_OVERRIDE" Value="12" Family="MOI" Type="uint32_t" AcceptedValues="11..15" Product="Hyenas" Info="Constant with accepted values"/>
+    <Constant Name="CONSTANT_ACCEPTED_VALUES_OVERRIDE" Value="10" Family="MOI" Type="uint32_t" Product="Hyenas" Proto="P2" Info="Constant with accepted values"/>
+    <Instance Name="ExampleInstance">
+      <Constant Name="INSTANCE_CONSTANT_UINT32" Value="4294967295" Type="uint32_t" Info="A constant of type uint32_t"/>
+      <Constant Name="INSTANCE_CONSTANT_INT32_MAX" Value="2147483647" Type="int32_t" Info="A constant of type int32_t, max value"/>
+      <Constant Name="INSTANCE_CONSTANT_INT32_MIN" Value="-2147483648" Type="int32_t" Info="A constant of type int32_t, min value"/>
+      <Constant Name="INSTANCE_CONSTANT_UINT64" Value="18446744073709551615" Type="uint64_t" Info="A constant of type uint64_t"/>
+      <Constant Name="INSTANCE_CONSTANT_INT64_MAX" Value="9223372036854775807" Type="int64_t" Info="A constant of type int64_t, max value"/>
+      <Constant Name="INSTANCE_CONSTANT_INT64_MIN" Value="-9223372036854775808" Type="int64_t" Info="A constant of type int64_t, min value"/>
+      <Constant Name="INSTANCE_CONSTANT_STRING" Value="Test string" Type="string" Info="A constant of type string"/>
+      <Constant Name="INSTANCE_CONSTANT_BOOL_1" Value="true" Type="bool" Info="A constant of type bool, true"/>
+      <Constant Name="INSTANCE_CONSTANT_BOOL_2" Value="True" Type="bool" Info="A constant of type bool, True"/>
+      <Constant Name="INSTANCE_CONSTANT_BOOL_3" Value="yes" Type="bool" Info="A constant of type bool, yes"/>
+      <Constant Name="INSTANCE_CONSTANT_BOOL_4" Value="on" Type="bool" Info="A constant of type bool, on"/>
+      <Constant Name="INSTANCE_CONSTANT_BOOL_5" Value="1" Type="bool" Info="A constant of type bool, 1"/>
+      <Constant Name="INSTANCE_CONSTANT_BOOL_6" Value="false" Type="bool" Info="A constant of type bool, false"/>
+      <Constant Name="INSTANCE_CONSTANT_BOOL_7" Value="False" Type="bool" Info="A constant of type bool, False"/>
+      <Constant Name="INSTANCE_CONSTANT_BOOL_8" Value="no" Type="bool" Info="A constant of type bool, no"/>
+      <Constant Name="INSTANCE_CONSTANT_BOOL_9" Value="off" Type="bool" Info="A constant of type bool, off"/>
+      <Constant Name="INSTANCE_CONSTANT_BOOL_10" Value="0" Type="bool" Info="A constant of type bool, 0"/>
+      <Constant Name="INSTANCE_CONSTANT_DOUBLE" Value="123.456" Type="double" Info="A constant of type double"/>
+      <Constant Name="INSTANCE_CONSTANT_DEFAULT_ONLY" Value="Default" Type="string" Info="Constant with default value only"/>
+      <Constant Name="INSTANCE_CONSTANT_FAMILY_OVERRIDE" Value="Default" Type="string" Info="Constant with family override only"/>
+      <Constant Name="INSTANCE_CONSTANT_FAMILY_OVERRIDE" Value="Override" Family="MOI" Type="string" Info="Constant with family override only"/>
+      <Constant Name="INSTANCE_CONSTANT_PRODUCT_OVERRIDE" Value="Default" Type="string" Info="Constant with product override only"/>
+      <Constant Name="INSTANCE_CONSTANT_PRODUCT_OVERRIDE" Value="Override" Product="Hyenas" Type="string" Info="Constant with product override only"/>
+      <Constant Name="INSTANCE_CONSTANT_PROTO_OVERRIDE" Value="Default" Type="string" Info="Constant with proto override only"/>
+      <Constant Name="INSTANCE_CONSTANT_PROTO_OVERRIDE" Value="Override" Proto="P1" Type="string" Info="Constant with proto override only"/>
+      <Constant Name="INSTANCE_CONSTANT_FAMILY_PRODUCT_OVERRIDE" Value="Default" Type="string" Info="Constant with family and product override"/>
+      <Constant Name="INSTANCE_CONSTANT_FAMILY_PRODUCT_OVERRIDE" Value="Override" Type="string" Family="MOI" Product="Hyenas" Info="Constant with family and product override"/>
+      <Constant Name="INSTANCE_CONSTANT_FAMILY_PROTO_OVERRIDE" Value="Default" Type="string" Info="Constant with family and proto override"/>
+      <Constant Name="INSTANCE_CONSTANT_FAMILY_PROTO_OVERRIDE" Value="Override" Type="string" Family="MOI" Proto="P1" Info="Constant with family and proto override"/>
+      <Constant Name="INSTANCE_CONSTANT_PRODUCT_PROTO_OVERRIDE" Value="Default" Type="string" Info="Constant with product and proto override"/>
+      <Constant Name="INSTANCE_CONSTANT_PRODUCT_PROTO_OVERRIDE" Value="Override" Type="string" Product="Hyenas" Proto="P1" Info="Constant with product and proto override"/>
+      <Constant Name="INSTANCE_CONSTANT_FAMILY_PRODUCT_PROTO_OVERRIDE" Value="Default" Type="string" Info="Constant with family, product and proto override"/>
+      <Constant Name="INSTANCE_CONSTANT_FAMILY_PRODUCT_PROTO_OVERRIDE" Value="Override" Type="string" Family="MOI" Product="Hyenas" Proto="P1" Info="Constant with family, product and proto override"/>
+      <Constant Name="INSTANCE_CONSTANT_MULTIPLE_OVERRIDES" Value="Default" Type="string" Info="Constant with multiple overrides"/>
+      <Constant Name="INSTANCE_CONSTANT_MULTIPLE_OVERRIDES" Value="Family" Type="string" Family="MOI"/>
+      <Constant Name="INSTANCE_CONSTANT_MULTIPLE_OVERRIDES" Value="Product" Type="string" Product="Hyenas"/>
+      <Constant Name="INSTANCE_CONSTANT_MULTIPLE_OVERRIDES" Value="Proto" Type="string" Proto="P1"/>
+      <Constant Name="INSTANCE_CONSTANT_MULTIPLE_OVERRIDES" Value="FamilyProduct" Type="string" Family="MOI" Product="Hyenas"/>
+      <Constant Name="INSTANCE_CONSTANT_MULTIPLE_OVERRIDES" Value="FamilyProto" Type="string" Family="MOI" Proto="P1"/>
+      <Constant Name="INSTANCE_CONSTANT_MULTIPLE_OVERRIDES" Value="ProductProto" Type="string" Product="Hyenas" Proto="P1"/>
+      <Constant Name="INSTANCE_CONSTANT_MULTIPLE_OVERRIDES" Value="FamilyProductProto" Type="string" Family="MOI" Product="Hyenas" Proto="P1"/>
+      <Constant Name="CONSTANT_INSTANCE_OVERRIDE" Value="Instance" Type="string" Info="Instance constant overriding component constant"/>
+      <Constant Name="CONSTANT_INSTANCE_OVERRIDE" Value="Instance" Type="string" Family="MOI"/>
+      <Constant Name="CONSTANT_INSTANCE_OVERRIDE" Value="Instance" Type="string" Product="Hyenas"/>
+      <Constant Name="CONSTANT_INSTANCE_OVERRIDE" Value="Instance" Type="string" Proto="P1"/>
+      <Constant Name="CONSTANT_INSTANCE_OVERRIDE" Value="Instance" Type="string" Family="MOI" Product="Hyenas"/>
+      <Constant Name="CONSTANT_INSTANCE_OVERRIDE" Value="Instance" Type="string" Family="MOI" Proto="P1"/>
+      <Constant Name="CONSTANT_INSTANCE_OVERRIDE" Value="Instance" Type="string" Product="Hyenas" Proto="P1"/>
+      <Constant Name="CONSTANT_INSTANCE_OVERRIDE" Value="Instance" Type="string" Family="MOI" Product="Hyenas" Proto="P1"/>
+      <Constant Name="CONSTANT_ACCEPTED_VALUES_OVERRIDE" Value="103" AcceptedValues="100..105" Type="uint32_t" Info="Constant with accepted values"/>
+      <Constant Name="CONSTANT_ACCEPTED_VALUES_OVERRIDE" Value="110" AcceptedValues="106..110" Type="uint32_t" Family="MOI" Info="Constant with accepted values"/>
+      <Constant Name="CONSTANT_ACCEPTED_VALUES_OVERRIDE" Value="112" AcceptedValues="110..115" Type="uint32_t" Family="MOI" Product="Hyenas" Info="Constant with accepted values"/>
+      <Constant Name="CONSTANT_ACCEPTED_VALUES_OVERRIDE" Value="100" Type="uint32_t" Family="MOI" Product="Hyenas" Proto="P2" Info="Constant with accepted values"/>
+    </Instance>
+  </Component>
+  <Component Name="SystemConstantsTest" Personality="1|2|3">
+    <Constant Name="TEST_CLASS_CONSTANT_FOR_MULTIPLE_PERSONALITIES" Value="Success" Type="string" Info="A constant of type string"/>
+    <Instance Name="ExampleInstance">
+      <Constant Name="TEST_INSTANCE_CONSTANT_FOR_MULTIPLE_PERSONALITIES" Value="Success" Type="string" Info="A constant of type string"/>
+    </Instance>
+  </Component>
+  <Component Name="SystemConstantsTest" Personality="ExamplePersonality">
+    <Constant Name="CONSTANT_UINT32" Value="4294967295" Type="uint32_t" Info="A constant of type uint32_t"/>
+    <Constant Name="CONSTANT_INT32_MAX" Value="2147483647" Type="int32_t" Info="A constant of type int32_t, max value"/>
+    <Constant Name="CONSTANT_INT32_MIN" Value="-2147483648" Type="int32_t" Info="A constant of type int32_t, min value"/>
+    <Constant Name="CONSTANT_UINT64" Value="18446744073709551615" Type="uint64_t" Info="A constant of type uint64_t"/>
+    <Constant Name="CONSTANT_INT64_MAX" Value="9223372036854775807" Type="int64_t" Info="A constant of type int64_t, max value"/>
+    <Constant Name="CONSTANT_INT64_MIN" Value="-9223372036854775808" Type="int64_t" Info="A constant of type int64_t, min value"/>
+    <Constant Name="CONSTANT_STRING" Value="Test string" Type="string" Info="A constant of type string"/>
+    <Constant Name="CONSTANT_BOOL_1" Value="true" Type="bool" Info="A constant of type bool, true"/>
+    <Constant Name="CONSTANT_BOOL_2" Value="True" Type="bool" Info="A constant of type bool, True"/>
+    <Constant Name="CONSTANT_BOOL_3" Value="yes" Type="bool" Info="A constant of type bool, yes"/>
+    <Constant Name="CONSTANT_BOOL_4" Value="on" Type="bool" Info="A constant of type bool, on"/>
+    <Constant Name="CONSTANT_BOOL_5" Value="1" Type="bool" Info="A constant of type bool, 1"/>
+    <Constant Name="CONSTANT_BOOL_6" Value="false" Type="bool" Info="A constant of type bool, false"/>
+    <Constant Name="CONSTANT_BOOL_7" Value="False" Type="bool" Info="A constant of type bool, False"/>
+    <Constant Name="CONSTANT_BOOL_8" Value="no" Type="bool" Info="A constant of type bool, no"/>
+    <Constant Name="CONSTANT_BOOL_9" Value="off" Type="bool" Info="A constant of type bool, off"/>
+    <Constant Name="CONSTANT_BOOL_10" Value="0" Type="bool" Info="A constant of type bool, 0"/>
+    <Constant Name="CONSTANT_DOUBLE" Value="123.456" Type="double" Info="A constant of type double"/>
+    <Constant Name="CONSTANT_DEFAULT_ONLY" Value="PersonalityDefault" Type="string" Info="Constant with default value only"/>
+    <Constant Name="CONSTANT_FAMILY_OVERRIDE" Value="PersonalityDefault" Type="string" Info="Constant with family override only"/>
+    <Constant Name="CONSTANT_FAMILY_OVERRIDE" Value="PersonalityOverride" Family="MOI" Type="string" Info="Constant with family override only"/>
+    <Constant Name="CONSTANT_PRODUCT_OVERRIDE" Value="PersonalityDefault" Type="string" Info="Constant with product override only"/>
+    <Constant Name="CONSTANT_PRODUCT_OVERRIDE" Value="PersonalityOverride" Product="Hyenas" Type="string" Info="Constant with product override only"/>
+    <Constant Name="CONSTANT_PROTO_OVERRIDE" Value="PersonalityDefault" Type="string" Info="Constant with proto override only"/>
+    <Constant Name="CONSTANT_PROTO_OVERRIDE" Value="PersonalityOverride" Proto="P1" Type="string" Info="Constant with proto override only"/>
+    <Constant Name="CONSTANT_FAMILY_PRODUCT_OVERRIDE" Value="PersonalityDefault" Type="string" Info="Constant with family and product override"/>
+    <Constant Name="CONSTANT_FAMILY_PRODUCT_OVERRIDE" Value="PersonalityOverride" Type="string" Family="MOI" Product="Hyenas" Info="Constant with family and product override"/>
+    <Constant Name="CONSTANT_FAMILY_PROTO_OVERRIDE" Value="PersonalityDefault" Type="string" Info="Constant with family and proto override"/>
+    <Constant Name="CONSTANT_FAMILY_PROTO_OVERRIDE" Value="PersonalityOverride" Type="string" Family="MOI" Proto="P1" Info="Constant with family and proto override"/>
+    <Constant Name="CONSTANT_PRODUCT_PROTO_OVERRIDE" Value="PersonalityDefault" Type="string" Info="Constant with product and proto override"/>
+    <Constant Name="CONSTANT_PRODUCT_PROTO_OVERRIDE" Value="PersonalityOverride" Type="string" Product="Hyenas" Proto="P1" Info="Constant with product and proto override"/>
+    <Constant Name="CONSTANT_FAMILY_PRODUCT_PROTO_OVERRIDE" Value="PersonalityDefault" Type="string" Info="Constant with family, product and proto override"/>
+    <Constant Name="CONSTANT_FAMILY_PRODUCT_PROTO_OVERRIDE" Value="PersonalityOverride" Type="string" Family="MOI" Product="Hyenas" Proto="P1" Info="Constant with family, product and proto override"/>
+    <Constant Name="CONSTANT_MULTIPLE_OVERRIDES" Value="PersonalityDefault" Type="string" Info="Constant with multiple overrides"/>
+    <Constant Name="CONSTANT_MULTIPLE_OVERRIDES" Value="PersonalityFamily" Type="string" Family="MOI"/>
+    <Constant Name="CONSTANT_MULTIPLE_OVERRIDES" Value="PersonalityProduct" Type="string" Product="Hyenas"/>
+    <Constant Name="CONSTANT_MULTIPLE_OVERRIDES" Value="PersonalityProto" Type="string" Proto="P1"/>
+    <Constant Name="CONSTANT_MULTIPLE_OVERRIDES" Value="PersonalityFamilyProduct" Type="string" Family="MOI" Product="Hyenas"/>
+    <Constant Name="CONSTANT_MULTIPLE_OVERRIDES" Value="PersonalityFamilyProto" Type="string" Family="MOI" Proto="P1"/>
+    <Constant Name="CONSTANT_MULTIPLE_OVERRIDES" Value="PersonalityProductProto" Type="string" Product="Hyenas" Proto="P1"/>
+    <Constant Name="CONSTANT_MULTIPLE_OVERRIDES" Value="PersonalityFamilyProductProto" Type="string" Family="MOI" Product="Hyenas" Proto="P1"/>
+    <Constant Name="CONSTANT_INSTANCE_OVERRIDE" Value="PersonalityClass" Type="string" Info="Constant with multiple overrides"/>
+    <Constant Name="CONSTANT_INSTANCE_OVERRIDE" Value="PersonalityClass" Type="string" Family="MOI"/>
+    <Constant Name="CONSTANT_INSTANCE_OVERRIDE" Value="PersonalityClass" Type="string" Product="Hyenas"/>
+    <Constant Name="CONSTANT_INSTANCE_OVERRIDE" Value="PersonalityClass" Type="string" Proto="P1"/>
+    <Constant Name="CONSTANT_INSTANCE_OVERRIDE" Value="PersonalityClass" Type="string" Family="MOI" Product="Hyenas"/>
+    <Constant Name="CONSTANT_INSTANCE_OVERRIDE" Value="PersonalityClass" Type="string" Family="MOI" Proto="P1"/>
+    <Constant Name="CONSTANT_INSTANCE_OVERRIDE" Value="PersonalityClass" Type="string" Product="Hyenas" Proto="P1"/>
+    <Constant Name="CONSTANT_INSTANCE_OVERRIDE" Value="PersonalityClass" Type="string" Family="MOI" Product="Hyenas" Proto="P1"/>
+    <Constant Name="CONSTANT_ACCEPTED_VALUES_OVERRIDE" Value="203" AcceptedValues="200..205" Type="uint32_t" Info="Constant with accepted values"/>
+    <Constant Name="CONSTANT_ACCEPTED_VALUES_OVERRIDE" Value="210" AcceptedValues="206..210" Type="uint32_t" Family="MOI" Info="Constant with accepted values"/>
+    <Constant Name="CONSTANT_ACCEPTED_VALUES_OVERRIDE" Value="212" AcceptedValues="210..215" Type="uint32_t" Family="MOI" Product="Hyenas" Info="Constant with accepted values"/>
+    <Constant Name="CONSTANT_ACCEPTED_VALUES_OVERRIDE" Value="200" Type="uint32_t" Family="MOI" Product="Hyenas" Proto="P2" Info="Constant with accepted values"/>
+    <Instance Name="ExampleInstance">
+      <Constant Name="INSTANCE_CONSTANT_UINT32" Value="4294967295" Type="uint32_t" Info="A constant of type uint32_t"/>
+      <Constant Name="INSTANCE_CONSTANT_INT32_MAX" Value="2147483647" Type="int32_t" Info="A constant of type int32_t, max value"/>
+      <Constant Name="INSTANCE_CONSTANT_INT32_MIN" Value="-2147483648" Type="int32_t" Info="A constant of type int32_t, min value"/>
+      <Constant Name="INSTANCE_CONSTANT_UINT64" Value="18446744073709551615" Type="uint64_t" Info="A constant of type uint64_t"/>
+      <Constant Name="INSTANCE_CONSTANT_INT64_MAX" Value="9223372036854775807" Type="int64_t" Info="A constant of type int64_t, max value"/>
+      <Constant Name="INSTANCE_CONSTANT_INT64_MIN" Value="-9223372036854775808" Type="int64_t" Info="A constant of type int64_t, min value"/>
+      <Constant Name="INSTANCE_CONSTANT_STRING" Value="Test string" Type="string" Info="A constant of type string"/>
+      <Constant Name="INSTANCE_CONSTANT_BOOL_1" Value="true" Type="bool" Info="A constant of type bool, true"/>
+      <Constant Name="INSTANCE_CONSTANT_BOOL_2" Value="True" Type="bool" Info="A constant of type bool, True"/>
+      <Constant Name="INSTANCE_CONSTANT_BOOL_3" Value="yes" Type="bool" Info="A constant of type bool, yes"/>
+      <Constant Name="INSTANCE_CONSTANT_BOOL_4" Value="on" Type="bool" Info="A constant of type bool, on"/>
+      <Constant Name="INSTANCE_CONSTANT_BOOL_5" Value="1" Type="bool" Info="A constant of type bool, 1"/>
+      <Constant Name="INSTANCE_CONSTANT_BOOL_6" Value="false" Type="bool" Info="A constant of type bool, false"/>
+      <Constant Name="INSTANCE_CONSTANT_BOOL_7" Value="False" Type="bool" Info="A constant of type bool, False"/>
+      <Constant Name="INSTANCE_CONSTANT_BOOL_8" Value="no" Type="bool" Info="A constant of type bool, no"/>
+      <Constant Name="INSTANCE_CONSTANT_BOOL_9" Value="off" Type="bool" Info="A constant of type bool, off"/>
+      <Constant Name="INSTANCE_CONSTANT_BOOL_10" Value="0" Type="bool" Info="A constant of type bool, 0"/>
+      <Constant Name="INSTANCE_CONSTANT_DOUBLE" Value="123.456" Type="double" Info="A constant of type double"/>
+      <Constant Name="INSTANCE_CONSTANT_DEFAULT_ONLY" Value="PersonalityDefault" Type="string" Info="Constant with default value only"/>
+      <Constant Name="INSTANCE_CONSTANT_FAMILY_OVERRIDE" Value="PersonalityDefault" Type="string" Info="Constant with family override only"/>
+      <Constant Name="INSTANCE_CONSTANT_FAMILY_OVERRIDE" Value="PersonalityOverride" Family="MOI" Type="string" Info="Constant with family override only"/>
+      <Constant Name="INSTANCE_CONSTANT_PRODUCT_OVERRIDE" Value="PersonalityDefault" Type="string" Info="Constant with product override only"/>
+      <Constant Name="INSTANCE_CONSTANT_PRODUCT_OVERRIDE" Value="PersonalityOverride" Product="Hyenas" Type="string" Info="Constant with product override only"/>
+      <Constant Name="INSTANCE_CONSTANT_PROTO_OVERRIDE" Value="PersonalityDefault" Type="string" Info="Constant with proto override only"/>
+      <Constant Name="INSTANCE_CONSTANT_PROTO_OVERRIDE" Value="PersonalityOverride" Proto="P1" Type="string" Info="Constant with proto override only"/>
+      <Constant Name="INSTANCE_CONSTANT_FAMILY_PRODUCT_OVERRIDE" Value="PersonalityDefault" Type="string" Info="Constant with family and product override"/>
+      <Constant Name="INSTANCE_CONSTANT_FAMILY_PRODUCT_OVERRIDE" Value="PersonalityOverride" Type="string" Family="MOI" Product="Hyenas" Info="Constant with family and product override"/>
+      <Constant Name="INSTANCE_CONSTANT_FAMILY_PROTO_OVERRIDE" Value="PersonalityDefault" Type="string" Info="Constant with family and proto override"/>
+      <Constant Name="INSTANCE_CONSTANT_FAMILY_PROTO_OVERRIDE" Value="PersonalityOverride" Type="string" Family="MOI" Proto="P1" Info="Constant with family and proto override"/>
+      <Constant Name="INSTANCE_CONSTANT_PRODUCT_PROTO_OVERRIDE" Value="PersonalityDefault" Type="string" Info="Constant with product and proto override"/>
+      <Constant Name="INSTANCE_CONSTANT_PRODUCT_PROTO_OVERRIDE" Value="PersonalityOverride" Type="string" Product="Hyenas" Proto="P1" Info="Constant with product and proto override"/>
+      <Constant Name="INSTANCE_CONSTANT_FAMILY_PRODUCT_PROTO_OVERRIDE" Value="PersonalityDefault" Type="string" Info="Constant with family, product and proto override"/>
+      <Constant Name="INSTANCE_CONSTANT_FAMILY_PRODUCT_PROTO_OVERRIDE" Value="PersonalityOverride" Type="string" Family="MOI" Product="Hyenas" Proto="P1" Info="Constant with family, product and proto override"/>
+      <Constant Name="INSTANCE_CONSTANT_MULTIPLE_OVERRIDES" Value="PersonalityDefault" Type="string" Info="Constant with multiple overrides"/>
+      <Constant Name="INSTANCE_CONSTANT_MULTIPLE_OVERRIDES" Value="PersonalityFamily" Type="string" Family="MOI"/>
+      <Constant Name="INSTANCE_CONSTANT_MULTIPLE_OVERRIDES" Value="PersonalityProduct" Type="string" Product="Hyenas"/>
+      <Constant Name="INSTANCE_CONSTANT_MULTIPLE_OVERRIDES" Value="PersonalityProto" Type="string" Proto="P1"/>
+      <Constant Name="INSTANCE_CONSTANT_MULTIPLE_OVERRIDES" Value="PersonalityFamilyProduct" Type="string" Family="MOI" Product="Hyenas"/>
+      <Constant Name="INSTANCE_CONSTANT_MULTIPLE_OVERRIDES" Value="PersonalityFamilyProto" Type="string" Family="MOI" Proto="P1"/>
+      <Constant Name="INSTANCE_CONSTANT_MULTIPLE_OVERRIDES" Value="PersonalityProductProto" Type="string" Product="Hyenas" Proto="P1"/>
+      <Constant Name="INSTANCE_CONSTANT_MULTIPLE_OVERRIDES" Value="PersonalityFamilyProductProto" Type="string" Family="MOI" Product="Hyenas" Proto="P1"/>
+      <Constant Name="CONSTANT_INSTANCE_OVERRIDE" Value="PersonalityInstance" Type="string" Info="Instance constant overriding component constant"/>
+      <Constant Name="CONSTANT_INSTANCE_OVERRIDE" Value="PersonalityInstance" Type="string" Family="MOI"/>
+      <Constant Name="CONSTANT_INSTANCE_OVERRIDE" Value="PersonalityInstance" Type="string" Product="Hyenas"/>
+      <Constant Name="CONSTANT_INSTANCE_OVERRIDE" Value="PersonalityInstance" Type="string" Proto="P1"/>
+      <Constant Name="CONSTANT_INSTANCE_OVERRIDE" Value="PersonalityInstance" Type="string" Family="MOI" Product="Hyenas"/>
+      <Constant Name="CONSTANT_INSTANCE_OVERRIDE" Value="PersonalityInstance" Type="string" Family="MOI" Proto="P1"/>
+      <Constant Name="CONSTANT_INSTANCE_OVERRIDE" Value="PersonalityInstance" Type="string" Product="Hyenas" Proto="P1"/>
+      <Constant Name="CONSTANT_INSTANCE_OVERRIDE" Value="PersonalityInstance" Type="string" Family="MOI" Product="Hyenas" Proto="P1"/>
+      <Constant Name="CONSTANT_ACCEPTED_VALUES_OVERRIDE" Value="303" AcceptedValues="300..305" Type="uint32_t" Info="Constant with accepted values"/>
+      <Constant Name="CONSTANT_ACCEPTED_VALUES_OVERRIDE" Value="310" AcceptedValues="306..310" Type="uint32_t" Family="MOI" Info="Constant with accepted values"/>
+      <Constant Name="CONSTANT_ACCEPTED_VALUES_OVERRIDE" Value="312" AcceptedValues="310..315" Type="uint32_t" Family="MOI" Product="Hyenas" Info="Constant with accepted values"/>
+      <Constant Name="CONSTANT_ACCEPTED_VALUES_OVERRIDE" Value="300" Type="uint32_t" Family="MOI" Product="Hyenas" Proto="P2" Info="Constant with accepted values"/>
+    </Instance>
+  </Component>
+  <Component Name="SystemConstantsTestRolesRnd">
+    <Constant Name="ROLE_CONSTANT_CLASS" Value="Success" Type="string" Info="A constant of type string"/>
+    <Constant Name="ROLE_CONSTANT_1_CLASS" Auth="TEST1" Value="Success" Type="string" Info="A constant of type string"/>
+    <Constant Name="ROLE_CONSTANT_1_2_CLASS" Auth="TEST1|TEST2" Value="Success" Type="string" Info="A constant of type string"/>
+    <Constant Name="ROLE_CONSTANT_OVERRIDE" Auth="TEST1" Value="Default" Type="string" Info="Auth override"/>
+    <Constant Name="ROLE_CONSTANT_OVERRIDE" Auth="TEST2" Value="Default" Type="string" Family="MOI"/>
+    <Constant Name="ROLE_CONSTANT_OVERRIDE" Value="Default" Type="string" Family="MOI" Product="Hyenas"/>
+    <Instance Name="ExampleInstanceRndRoles">
+      <Constant Name="ROLE_CONSTANT_INSTANCE" Value="Success" Type="string" Info="A constant of type string"/>
+      <Constant Name="ROLE_CONSTANT_1_INSTANCE" Auth="TEST1" Value="Success" Type="string" Info="A constant of type string"/>
+      <Constant Name="ROLE_CONSTANT_1_2_INSTANCE" Auth="TEST1|TEST2" Value="Success" Type="string" Info="A constant of type string"/>
+    </Instance>
+    <Instance Name="ExampleInstanceRndTsRoles" Auth="TEST1">
+      <Constant Name="ROLE_CONSTANT_INSTANCE_1" Value="Success" Type="string" Info="A constant of type string"/>
+      <Constant Name="ROLE_CONSTANT_1_INSTANCE_1" Auth="TEST1" Value="Success" Type="string" Info="A constant of type string"/>
+      <Constant Name="ROLE_CONSTANT_1_2_INSTANCE_1" Auth="TEST1|TEST2" Value="Success" Type="string" Info="A constant of type string"/>
+    </Instance>
+    <Instance Name="ExampleInstanceRndTsMgfRoles" Auth="TEST1|TEST2">
+      <Constant Name="ROLE_CONSTANT_INSTANCE_1_2" Value="Success" Type="string" Info="A constant of type string"/>
+      <Constant Name="ROLE_CONSTANT_1_INSTANCE_1_2" Auth="TEST1" Value="Success" Type="string" Info="A constant of type string"/>
+      <Constant Name="ROLE_CONSTANT_1_2_INSTANCE_1_2" Auth="TEST1|TEST2" Value="Success" Type="string" Info="A constant of type string"/>
+    </Instance>
+  </Component>
+  <Component Name="SystemConstantsTestRolesRndTest1" Auth="TEST1">
+    <Constant Name="ROLE_CONSTANT_CLASS_COMPONENT_1" Value="Success" Type="string" Info="A constant of type string"/>
+    <Constant Name="ROLE_CONSTANT_1_CLASS_COMPONENT_1" Auth="TEST1" Value="Success" Type="string" Info="A constant of type string"/>
+    <Constant Name="ROLE_CONSTANT_1_2_CLASS_COMPONENT_1" Auth="TEST1|TEST2" Value="Success" Type="string" Info="A constant of type string"/>
+    <Instance Name="ExampleInstanceRndRoles">
+      <Constant Name="ROLE_CONSTANT_INSTANCE_COMPONENT_1" Value="Success" Type="string" Info="A constant of type string"/>
+      <Constant Name="ROLE_CONSTANT_1_INSTANCE_COMPONENT_1" Auth="TEST1" Value="Success" Type="string" Info="A constant of type string"/>
+      <Constant Name="ROLE_CONSTANT_1_2_INSTANCE_COMPONENT_1" Auth="TEST1|TEST2" Value="Success" Type="string" Info="A constant of type string"/>
+    </Instance>
+    <Instance Name="ExampleInstanceRndTsRoles" Auth="TEST1">
+      <Constant Name="ROLE_CONSTANT_INSTANCE_1_COMPONENT_1" Value="Success" Type="string" Info="A constant of type string"/>
+      <Constant Name="ROLE_CONSTANT_1_INSTANCE_1_COMPONENT_1" Auth="TEST1" Value="Success" Type="string" Info="A constant of type string"/>
+      <Constant Name="ROLE_CONSTANT_1_2_INSTANCE_1_COMPONENT_1" Auth="TEST1|TEST2" Value="Success" Type="string" Info="A constant of type string"/>
+    </Instance>
+    <Instance Name="ExampleInstanceRndTsMgfRoles" Auth="TEST1|TEST2">
+      <Constant Name="ROLE_CONSTANT_INSTANCE_1_2_COMPONENT_1" Value="Success" Type="string" Info="A constant of type string"/>
+      <Constant Name="ROLE_CONSTANT_1_INSTANCE_1_2_COMPONENT_1" Auth="TEST1" Value="Success" Type="string" Info="A constant of type string"/>
+      <Constant Name="ROLE_CONSTANT_1_2_INSTANCE_1_2_COMPONENT_1" Auth="TEST1|TEST2" Value="Success" Type="string" Info="A constant of type string"/>
+    </Instance>
+  </Component>
+  <Component Name="SystemConstantsTestRolesRndTest1Test2" Auth="TEST1|TEST2">
+    <Constant Name="ROLE_CONSTANT_CLASS_COMPONENT_1_2" Value="Success" Type="string" Info="A constant of type string"/>
+    <Constant Name="ROLE_CONSTANT_1_CLASS_COMPONENT_1_2" Auth="TEST1" Value="Success" Type="string" Info="A constant of type string"/>
+    <Constant Name="ROLE_CONSTANT_1_2_CLASS_COMPONENT_1_2" Auth="TEST1|TEST2" Value="Success" Type="string" Info="A constant of type string"/>
+    <Instance Name="ExampleInstanceRndRoles">
+      <Constant Name="ROLE_CONSTANT_INSTANCE_COMPONENT_1_2" Value="Success" Type="string" Info="A constant of type string"/>
+      <Constant Name="ROLE_CONSTANT_1_INSTANCE_COMPONENT_1_2" Auth="TEST1" Value="Success" Type="string" Info="A constant of type string"/>
+      <Constant Name="ROLE_CONSTANT_1_2_INSTANCE_COMPONENT_1_2" Auth="TEST1|TEST2" Value="Success" Type="string" Info="A constant of type string"/>
+    </Instance>
+    <Instance Name="ExampleInstanceRndTsRoles" Auth="TEST1">
+      <Constant Name="ROLE_CONSTANT_INSTANCE_1_COMPONENT_1_2" Value="Success" Type="string" Info="A constant of type string"/>
+      <Constant Name="ROLE_CONSTANT_1_INSTANCE_1_COMPONENT_1_2" Auth="TEST1" Value="Success" Type="string" Info="A constant of type string"/>
+      <Constant Name="ROLE_CONSTANT_1_2_INSTANCE_1_COMPONENT_1_2" Auth="TEST1|TEST2" Value="Success" Type="string" Info="A constant of type string"/>
+    </Instance>
+    <Instance Name="ExampleInstanceRndTsMgfRoles" Auth="TEST1|TEST2">
+      <Constant Name="ROLE_CONSTANT_INSTANCE_1_2_COMPONENT_1_2" Value="Success" Type="string" Info="A constant of type string"/>
+      <Constant Name="ROLE_CONSTANT_1_INSTANCE_1_2_COMPONENT_1_2" Auth="TEST1" Value="Success" Type="string" Info="A constant of type string"/>
+      <Constant Name="ROLE_CONSTANT_1_2_INSTANCE_1_2_COMPONENT_1_2" Auth="TEST1|TEST2" Value="Success" Type="string" Info="A constant of type string"/>
+    </Instance>
+  </Component>
+  <Component Name="SystemMonitor">
+    <Constant Name="MIN_CPU_THRESHOLD_SILENT" Value="100" Type="uint32_t" Info="Threshold of percentage of usage of CPU to report SILENT error if crossed"/>
+    <Constant Name="MIN_CPU_THRESHOLD_WARNING" Value="105" Type="uint32_t" Info="Threshold of percentage of usage of CPU to report WARNING error if crossed"/>
+    <Constant Name="MIN_RAM_THRESHOLD_SILENT" Value="90" Type="uint32_t" AcceptedValues="1..100" Info="Threshold of percentage of usage of RAM to report SILENT error if crossed"/>
+    <Constant Name="MIN_RAM_THRESHOLD_WARNING" Value="95" Type="uint32_t" AcceptedValues="1..100" Info="Threshold of percentage of usage of RAM to report WARNING error if crossed"/>
+    <Constant Name="MIN_FILESYSTEM_THRESHOLD_SILENT" Value="75" Type="uint32_t" AcceptedValues="1..100" Info="Threshold of percentage of filesystem usage to report SILENT error if crossed"/>
+    <Constant Name="MIN_FILESYSTEM_THRESHOLD_WARNING" Value="90" Type="uint32_t" AcceptedValues="1..100" Info="Threshold of percentage of filesystem usage to report WARNING error if crossed"/>
+    <Constant Name="TIMEOUT_CHECK_IN_SECONDS" Value="20" Type="uint32_t" Info="Timeout for monitoring and loging resources usage"/>
+    <Constant Name="ENABLE_MONITORING" Value="true" Type="bool" Info="Flag for enable monitoring"/>
+  </Component>
+</Components>
