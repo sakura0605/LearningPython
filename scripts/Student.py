@@ -1,6 +1,3 @@
-import json
-
-
 class Student:
 
     def __init__(self, fullname, age, gpa):

@@ -8,11 +8,12 @@ file = open(path, 'r')
 students = json.load(file)
 list = []
 for s in students['students']:
-    st = Student()
-    st.from_json(s)
-    list.append(st)
+    student = Student()
+    student.from_json(s)
+    list.append(student)
 
 for s in list:
     print(s.toString())
 
 file.close()
+
