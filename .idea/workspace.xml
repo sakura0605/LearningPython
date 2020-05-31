@@ -18,24 +18,24 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="4" />
+          <entry key="py" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="4" />
+          <entry key="Python" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="7" />
-          <entry key="py" value="1225" />
+          <entry key="dummy" value="25" />
+          <entry key="py" value="2141" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="7" />
-          <entry key="Python" value="1225" />
+          <entry key="PLAIN_TEXT" value="25" />
+          <entry key="Python" value="2141" />
         </counts>
       </usages-collector>
     </session>
@@ -43,50 +43,37 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Functions/Lambdas/SampleLambdas.py">
+        <entry file="file://$PROJECT_DIR$/../Functions/ListComprehension/CubeOfNumberInList.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-17">
-              <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-              <folding>
-                <marker date="1590901026942" expanded="true" signature="46:51" ph="..." />
-              </folding>
+            <state relative-caret-position="21">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Functions/Lambdas/FilterUsingLambdas.py">
+        <entry file="file://$PROJECT_DIR$/../Functions/ListComprehension/EvenNumbersInList.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="3" column="55" lean-forward="true" selection-start-line="3" selection-start-column="55" selection-end-line="3" selection-end-column="55" />
-              <folding>
-                <marker date="1590901704706" expanded="true" signature="185:190" ph="..." />
-              </folding>
+            <state relative-caret-position="126">
+              <caret line="6" column="11" lean-forward="true" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Functions/Lambdas/MappingUsingLambdas.py">
+        <entry file="file://$PROJECT_DIR$/../Functions/ListComprehension/ProductElementsOfLists.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-              <folding>
-                <marker date="1590903617238" expanded="true" signature="122:127" ph="..." />
-                <marker date="1590903617238" expanded="true" signature="153:158" ph="..." />
-              </folding>
+            <state relative-caret-position="252">
+              <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../Functions/Lambdas/ReduceFunction.py">
+        <entry file="file://$PROJECT_DIR$/../Functions/ListComprehension/CommonElementInList.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="34" lean-forward="true" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-              <folding>
-                <element signature="e#1#29#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="168">
+              <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -110,6 +97,10 @@
         <option value="$PROJECT_DIR$/../Functions/Lambdas/FilterUsingLambdas.py" />
         <option value="$PROJECT_DIR$/../Functions/Lambdas/MappingUsingLambdas.py" />
         <option value="$PROJECT_DIR$/../Functions/Lambdas/ReduceFunction.py" />
+        <option value="$PROJECT_DIR$/../Functions/ListComprehension/CubeOfNumberInList.py" />
+        <option value="$PROJECT_DIR$/../Functions/ListComprehension/EvenNumbersInList.py" />
+        <option value="$PROJECT_DIR$/../Functions/ListComprehension/ProductElementsOfLists.py" />
+        <option value="$PROJECT_DIR$/../Functions/ListComprehension/CommonElementInList.py" />
       </list>
     </option>
   </component>
@@ -137,6 +128,11 @@
               <item name="Functions" type="462c0819:PsiDirectoryNode" />
               <item name="Lambdas" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Lambdas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Functions" type="462c0819:PsiDirectoryNode" />
+              <item name="ListComprehension" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -159,8 +155,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ReduceFunction">
-    <configuration name="CubeLambdas" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.CommonElementInList">
+    <configuration name="CommonElementInList" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Lambdas" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -168,11 +164,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Functions/Lambdas" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Functions/ListComprehension" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="F:\Python\Functions\Lambdas\SampleLambdas.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Functions/ListComprehension/CommonElementInList.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -181,7 +177,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="FilterUsingLambdas" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="CubeOfNumberInList" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Lambdas" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -189,11 +185,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Functions/Lambdas" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Functions/ListComprehension" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Functions/Lambdas/FilterUsingLambdas.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Functions/ListComprehension/CubeOfNumberInList.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -202,7 +198,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="MappingUsingLambdas" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="EvenNumbersInList" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Lambdas" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -210,11 +206,32 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Functions/Lambdas" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Functions/ListComprehension" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Functions/Lambdas/MappingUsingLambdas.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Functions/ListComprehension/EvenNumbersInList.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ProductElementsOfLists" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Lambdas" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Functions/ListComprehension" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Functions/ListComprehension/ProductElementsOfLists.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -245,17 +262,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.CubeLambdas" />
-      <item itemvalue="Python.FilterUsingLambdas" />
-      <item itemvalue="Python.MappingUsingLambdas" />
       <item itemvalue="Python.ReduceFunction" />
+      <item itemvalue="Python.CubeOfNumberInList" />
+      <item itemvalue="Python.EvenNumbersInList" />
+      <item itemvalue="Python.ProductElementsOfLists" />
+      <item itemvalue="Python.CommonElementInList" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.CommonElementInList" />
+        <item itemvalue="Python.ProductElementsOfLists" />
+        <item itemvalue="Python.EvenNumbersInList" />
+        <item itemvalue="Python.CubeOfNumberInList" />
         <item itemvalue="Python.ReduceFunction" />
-        <item itemvalue="Python.MappingUsingLambdas" />
-        <item itemvalue="Python.FilterUsingLambdas" />
-        <item itemvalue="Python.CubeLambdas" />
       </list>
     </recent_temporary>
   </component>
@@ -281,11 +300,11 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.3295082" />
+      <window_info anchor="bottom" id="Terminal" weight="0.3295082" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3295082" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3295082" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -332,11 +351,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../Functions/Lambdas/ReduceFunction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="34" lean-forward="true" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+        <state relative-caret-position="126">
+          <caret line="6" column="2" lean-forward="true" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
           <folding>
             <element signature="e#1#29#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Functions/ListComprehension/CubeOfNumberInList.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Functions/ListComprehension/EvenNumbersInList.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="11" lean-forward="true" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Functions/ListComprehension/ProductElementsOfLists.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Functions/ListComprehension/CommonElementInList.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
         </state>
       </provider>
     </entry>
