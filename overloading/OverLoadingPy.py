@@ -2,10 +2,10 @@
 # https://www.codementor.io/@arpitbhayani/overload-functions-in-python-13e32ahzqt
 
 
-# 1. Overloading Built-in Functions
+# 1. overloading Built-in Functions
 # To change the default behavior of Python's build-in functions.
 #  Only have to define the corresponding special method in our class
-from typing import overload
+#  from typing import overload
 
 
 class Purchase:
@@ -23,7 +23,7 @@ purchase = Purchase(['a', 'b', 'c'], "Python")
 print(len(purchase))
 
 
-# 2. Overloading User-Defined Functions:
+# 2. overloading User-Defined Functions:
 # To write function logic in such a way that depending upon the parameters passed,
 # a different piece of code executes inside the function.
 # for example: constructor
@@ -54,7 +54,7 @@ st_2 = Student("Jack", 13, "Level 6")
 st_2.display_1()
 
 
-# 3. Overloading User-Defined Functions:
+# 3. overloading User-Defined Functions:
 # If no argument then it returns 0
 # If have one argument then it returns the square of the value(computing the area of a square)
 # If have two arguments then it returns the product of the two values(computing the area of a rectangle)

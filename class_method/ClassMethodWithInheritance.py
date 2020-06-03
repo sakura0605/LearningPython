@@ -25,14 +25,15 @@ class Person:
 class Man(Person):
     gender = "Male"
 
+man_1 = Man.fromBirthYear("Hoa", 1996)
+man_1.display()
+# Instance of child
+print(isinstance(man_1, Man))
 
-# man_1 = Man.fromBirthYear("Hoa", 1996)
-# man_1.display()
-# print(isinstance(man_1, Man))
-#
-# man_2 = Man.fromFatherAge("Hien", 1988, 20)
-# man_2.display()
-# print(isinstance(man_2, Man))
+man_2 = Man.fromFatherAge("Hien", 1988, 20)
+man_2.display()
+# Instance of parent
+print(isinstance(man_2, Person))
 
 # 2.
 
@@ -68,6 +69,6 @@ salary = e.calculate_salary(basic, bonus)
 print(salary)
 
 e.__setattr__("salary", e.calculate_salary(float(e.basic), float(e.bonus)))
-# e.display()
+e.display()
 
 
