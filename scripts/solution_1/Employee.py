@@ -4,6 +4,7 @@ class Salary:
         return float(basic) * 12 + float(bonus) * 5
 
 
+# Solution 1:
 class Employee(Salary):
 
     def __init__(self, employeeId=None, name=None, basicSalary=None, bonus=None):
@@ -23,3 +24,4 @@ class Employee(Salary):
 
     def to_json(self):
         return self.__dict__
+

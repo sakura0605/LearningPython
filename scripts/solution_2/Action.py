@@ -1,6 +1,6 @@
 import json
 import xml.etree.ElementTree as ET
-from scripts.Employee import Employee
+from scripts.solution_2.Employee import Employee
 
 
 def read_file(path_xml):
@@ -18,11 +18,10 @@ def write_file(path_json, employeeList):
     employees = {"employees": []}
 
     for e in employeeList:
-        employee = Employee()
-        setattr(employee, "employeeId", getattr(e, "employeeId"))
-        setattr(employee, "name", getattr(e, "name"))
-        total = e.calculate_total_salary(getattr(e, "basicSalary"), getattr(e, "bonus"))
-        setattr(employee, "totalSalary", total)
+        employeeId = getattr(e, "employeeId")
+        name = getattr(e, "name")
+        salary = e.calculate_total_salary(getattr(e, "basicSalary"), getattr(e, "bonus"))
+        employee = Employee(employeeId, name, None, None, salary)
         employees["employees"].append(employee.to_json())
 
     json.dump(employees, file, indent=4)
