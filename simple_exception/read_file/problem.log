@@ -1,0 +1,5 @@
+ERROR:root:[Errno 2] No such file or directory: 'resources\\File.txt'
+INFO:root:time required for resources\File.txt = 0.0
+ERROR:root:[Errno 2] No such file or directory: 'resources\\FileToRead.txt'
+INFO:root:time required for resources\FileToRead.txt = 0.023104429244995117
+INFO:root:time required for FileToRead.txt = 0.0
