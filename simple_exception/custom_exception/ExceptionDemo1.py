@@ -1,5 +1,4 @@
 import CheckAgeFromInput
-
 age = 90
 
 try:
